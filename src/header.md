@@ -1,24 +1,29 @@
-Questa prova contiene _6 domande_ da risolvere in _100 minuti_.
-Le domande sono a **scelta multipla** o a **blocchi**, e sono divise in due parti:
+Questa prova contiene _5 problemi_ da risolvere in _120 minuti_, ed è divisa in due parti:
+- due problemi di interpretazione di **procedimenti procedurali** come programmi a blocchi, e
+- tre problemi di **programmazione** tramite blocchi.
 
-- domande di interpretazione di **procedimenti procedurali** come programmi a blocchi, e
-- domande di **programmazione** tramite blocchi.
-
-In entrambe le parti, le domande sono ordinate per difficoltà crescente.
-**Attento che la difficoltà è soggettiva!** Se stai passando tanto tempo cercando di risolvere una domanda, prova a passare ad altre domande e altre categorie!
+In entrambe le parti i problemi sono ordinati per difficoltà crescente.
+**Attento che la difficoltà è soggettiva!** Se stai passando tanto tempo cercando di risolvere un problema, prova a passare ad altri problemi e altre categorie!
 
 ## Punteggio
 
-Tutte le domande a _scelta multipla_ hanno 5 opzioni, di cui **solo una** è corretta. Il punteggio che puoi ottenere è:
+### Procedimenti procedurali
+
+Questi problemi comprendono _due domande_, valutate separatamente.
+La prima domanda è **sempre più semplice**, e può aiutare a rispondere alla seconda domanda.
+Le domande sono tutte a **scelta multipla** con 5 opzioni, di cui **solo una** è corretta. Il punteggio che puoi ottenere è:
 
 - 5 punti per una risposta _corretta_;
 - 1 punto per una risposta _non data_;
 - 0 punti per una risposta _sbagliata_.
 
-Le domande a _blocchi_ richiedono di scrivere un singolo programma a blocchi, che viene valutato su tre diversi livelli.
-Per ciascuna domanda e per ciascun livello, Il punteggio che puoi ottenere è:
+### Programmazione a blocchi
+
+Questi problemi richiedono di scrivere un **singolo** programma a blocchi, che viene valutato **contemporaneamente** su quattro diversi livelli.
+Quindi attenzione che non puoi scrivere programmi diversi per i diversi livelli, ma uno solo!
+Per ciascun problema e per ciascun livello, Il punteggio che puoi ottenere è:
 
 - 5 punti se il programma produce la risposta _corretta_;
 - 0 punti se il programma produce una risposta _sbagliata_.
 
-Quindi ogni domanda a blocchi può valere fino a 15 punti in totale.
+Quindi ogni domanda a blocchi può valere fino a 20 punti in totale.
