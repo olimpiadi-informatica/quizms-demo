@@ -1,0 +1,3 @@
+[submodule "src/asy-library"]
+	path = src/asy_library
+	url = git@github.com:olimpiadi-informatica/asy-library.git
