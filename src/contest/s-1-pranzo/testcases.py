@@ -14,7 +14,7 @@ frutti = {
 }
 food_types = {**verdure, **frutti}
 type = [food_types, verdure, frutti, food_types]
-N = [8, 15, 30, 50]
+N = [5, 10, 20, 40]
 for t,n in zip(type,N):
     queue = random.choices(list(t), k=n)
     testcases.append({"food_types": food_types, "queue": queue, "pos": 0, "N": n})

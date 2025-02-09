@@ -33,7 +33,7 @@ export default function Visualizer({ variables, state }) {
         })}
         <Sprite src={bunny} alt="Tip-Tap" x={1.6} y={0.9} follow />
       </Canvas>
-      <Variables variables={variables} />
+      <Variables variables={{ ...variables, N: state.N }} />
     </>
   );
 }

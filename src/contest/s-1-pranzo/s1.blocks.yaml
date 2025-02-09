@@ -92,7 +92,7 @@
   message0: termina
   previousStatement: null
   colour: 20
-  tooltip: termina il procedimento
+  tooltip: smetti di mangiare
   helpUrl: ""
   js: |
     if (state.pos < state.N)
