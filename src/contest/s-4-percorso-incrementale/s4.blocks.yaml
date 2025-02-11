@@ -5,7 +5,37 @@
   tooltip: L'esecuzione inizia da qui
   helpUrl: ""
   maxInstances: 1
-  js: ""
+  js: |
+    function controlla_posizione() {
+      if(state.pos >= state.N) {
+        exit(false, "Sei andato oltre l'ultima casella");
+      }
+    }
+    function controlla_indice() {
+      if (state.i >= state.M) {
+        exit(false, "Sei andato oltre l'ultima istruzione");
+      }
+    }
+    function colore() {
+      controlla_posizione();
+      return state.cols[state.pos];
+    }
+    function colora() {
+      controlla_posizione();
+      state.cols[state.pos] = "B";
+    }
+    function prossima_posizione() {
+      controlla_posizione();
+      state.pos += 1;
+    }
+    function istruzione() {
+      controlla_indice();
+      return state.instr[state.i];
+    }
+    function prossima_istruzione() {
+      controlla_indice();
+      state.i += 1;
+    }
 
 - type: N
   message0: N
@@ -34,7 +64,7 @@
   colour: 20
   tooltip: CAMBIAMI
   helpUrl: ""
-  js: state.instr[state.i] == %1
+  js: istruzione() == "%1"
 
 - type: colore casella
   message0: la casella corrente è %1
@@ -46,7 +76,7 @@
   output: Boolean
   colour: 20
   tooltip: CAMBIAMI
-  js: state.col[state.pos] == %1
+  js: colore() == "%1"
 
 - type: colora
   message0: colora di nero
@@ -54,7 +84,7 @@
   previousStatement: null
   nextStatement: null
   tooltip: CAMBIAMI
-  js: state.col[state.pos] = "B";
+  js: colora();
 
 - type: avanza
   message0: avanza
@@ -62,8 +92,7 @@
   previousStatement: null
   nextStatement: null
   tooltip: CAMBIAMI
-  js: |
-    state.pos += 1;
+  js: prossima_posizione();
 
 - type: prossima istruzione
   message0: prossima istruzione
@@ -71,8 +100,7 @@
   previousStatement: null
   nextStatement: null
   tooltip: CAMBIAMI
-  js: |
-    state.instr += 1;
+  js: prossima_istruzione();
 
 - type: torna all'inizio
   message0: torna all'inizio
@@ -81,6 +109,9 @@
   nextStatement: null
   tooltip: CAMBIAMI
   js: |
+    if(state.must_optimize) {
+      exit(false, "Non puoi tornare all'inizio in questo livello");
+    }
     state.pos = 0;
     state.i = 0;
 
@@ -91,4 +122,14 @@
   tooltip: termina il procedimento
   helpUrl: ""
   js: |
-    exit(true, "hai costruito bene le colonne, complimenti!");
+    ok = true;
+    for (i = 0; i < state.N; i++) {
+      if (state.cols[i] !== state.solution[i]) {
+        ok = false;
+        break;
+      }
+    }
+    if (ok)
+      exit(true, "hai colorato bene le caselle, complimenti!");
+    else
+      exit(false, "le caselle non sono state colorate come dovevano");
