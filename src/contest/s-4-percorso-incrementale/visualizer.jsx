@@ -60,7 +60,6 @@ export default function Visualizer({ variables, state }) {
       "numero di istruzioni": state.M,
       posizione: state.pos + 1,
       "istruzione n°": state.i + 1,
-      "istruzioni": state.instr,
     }} />
   </>;
 }
