@@ -23,51 +23,66 @@
   helpUrl: ""
   js: state.M
 
-- type: istruzione
-  message0: l'istruzione %1 è %2
+- type: istruzione corrente
+  message0: l'istruzione attuale è %1
   args0:
-    - type: input_value
-      check: Integer
-      min: "1"
-      max: state.M
     - type: field_dropdown
       options:
-        - [A, "A"]
-        - [S, "S"]
+        - [avanza, "A"]
+        - [salta, "S"]
   output: Boolean
   colour: 20
   tooltip: CAMBIAMI
   helpUrl: ""
-  js: state.instr[%1] == %2
+  js: state.instr[state.i] == %1
 
-- type: casella nera
-  message0: la casella %1 è %2
+- type: colore casella
+  message0: la casella corrente è %1
   args0:
-    - type: input_value
-      check: Integer
-      min: "1"
-      max: state.N
     - type: field_dropdown
       options:
-        - [bianca, "0"]
-        - [nera, "2"]
+        - [bianca, "W"]
+        - [nera, "B"]
   output: Boolean
   colour: 20
   tooltip: CAMBIAMI
-  js: state.col[%1] == %2
+  js: state.col[state.pos] == %1
 
 - type: colora
-  message0: colora di nero la casella %1
-  args0:
-    - type: input_value
-      check: Integer
-      min: "1"
-      max: state.N
+  message0: colora di nero
   colour: 20
   previousStatement: null
   nextStatement: null
   tooltip: CAMBIAMI
-  js: state.col[%1] = "B";
+  js: state.col[state.pos] = "B";
+
+- type: avanza
+  message0: avanza
+  colour: 20
+  previousStatement: null
+  nextStatement: null
+  tooltip: CAMBIAMI
+  js: |
+    state.pos += 1;
+
+- type: prossima istruzione
+  message0: prossima istruzione
+  colour: 20
+  previousStatement: null
+  nextStatement: null
+  tooltip: CAMBIAMI
+  js: |
+    state.instr += 1;
+
+- type: torna all'inizio
+  message0: torna all'inizio
+  colour: 20
+  previousStatement: null
+  nextStatement: null
+  tooltip: CAMBIAMI
+  js: |
+    state.pos = 0;
+    state.i = 0;
 
 - type: termina
   message0: termina
@@ -76,8 +91,4 @@
   tooltip: termina il procedimento
   helpUrl: ""
   js: |
-    if (state.pos[0] < state.S)
-      exit(false, "la colonna di sinistra è troppo bassa");
-    if (state.pos[2] < state.D)
-      exit(false, "la colonna di destra è troppo bassa");
     exit(true, "hai costruito bene le colonne, complimenti!");
