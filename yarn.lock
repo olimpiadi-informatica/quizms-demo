@@ -982,9 +982,9 @@
     fastq "^1.6.0"
 
 "@olinfo/quizms-mdx@^3.0.0-beta.0":
-  version "3.0.0-beta.4"
-  resolved "https://registry.yarnpkg.com/@olinfo/quizms-mdx/-/quizms-mdx-3.0.0-beta.4.tgz#567df344725a5d0e4a61b5bc3adaba06137d9379"
-  integrity sha512-RDK2MVWXJtCOl5Ezv8m37V7oTH4aNe+WxGoIxsSLQWvDe0Utj2J3LiZTlaqeP5U4WtVcN7OLJWHehep5MJopEw==
+  version "3.0.0-beta.5"
+  resolved "https://registry.yarnpkg.com/@olinfo/quizms-mdx/-/quizms-mdx-3.0.0-beta.5.tgz#90ee04dcb518230a123646a33596d0b530f54057"
+  integrity sha512-YbH+T1XM9k92lDR9J/5Qmb0YW5SnOs29MI9gkc7P/oST6UTNTdJ6QcYz4mnOrSLGUes9R+gO28VYwW7qsSDOMw==
   dependencies:
     "@blockly/disable-top-blocks" "^0.5"
     "@mdx-js/mdx" "^3.1"
