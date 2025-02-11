@@ -32,7 +32,7 @@ export function Sprite({ src, alt, x, y, width, height, rotation, follow, classN
     if (x !== pos.current.x || y !== pos.current.y) {
       pos.current = { x, y, changed: true };
     }
-  }, [pos.current, x, y]);
+  }, [x, y]);
 
   const { gravity, scale, setWidth, setHeight } = useContext(VisualizerContext);
   useEffect(() => {
@@ -52,13 +52,13 @@ export function Sprite({ src, alt, x, y, width, height, rotation, follow, classN
       });
     }, 160);
     return () => clearTimeout(id);
-  }, [ref.current, pos.current, x, y]);
+  }, [x, y, setWidth, setHeight, scale, follow, src.width, src.height, width, height]);
 
   return (
     <img
       ref={ref}
-      alt={alt}
       {...src}
+      alt={alt}
       className={`absolute transition-all ${className ?? ""}`}
       style={{
         [gravity]: `${y * scale}px`,
@@ -84,7 +84,7 @@ export function Rectangle({ color, height, width, x, y, rotation, className, sty
       setWidth((w) => Math.max(w, x * scale + (box?.width ?? width)));
       setHeight((h) => Math.max(h, y * scale + (box?.height ?? height)));
     }, 5);
-  }, [x, y, width, height]);
+  }, [x, y, width, height, setWidth, setHeight, scale]);
 
   return (
     <div

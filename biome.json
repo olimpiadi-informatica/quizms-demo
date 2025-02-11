@@ -37,7 +37,8 @@
         },
         "useFragmentSyntax": "error",
         "useShorthandArrayType": "error",
-        "useShorthandAssign": "error"
+        "useShorthandAssign": "error",
+        "useTemplate": "off"
       },
       "suspicious": {
         "noArrayIndexKey": "off",
