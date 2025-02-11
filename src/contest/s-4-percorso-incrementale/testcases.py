@@ -4,7 +4,6 @@ testcases = [
     dict(seed=1, N=6, M=2, instr=["S", "A"], cols=["W", "B", "W", "B", "W", "W"], all_white=False, must_optimize=False),
     dict(seed=2, N=10, M=6, all_white=True, must_optimize=False),
     dict(seed=3, N=30, M=10, all_white=False, must_optimize=False),
-    dict(seed=4, N=10, M=6, all_white=True, must_optimize=True),
     dict(seed=5, N=40, M=18, all_white=False, must_optimize=True),
 ]
 

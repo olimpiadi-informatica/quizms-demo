@@ -8,7 +8,7 @@
   js: |
     function controlla_posizione() {
       if(state.pos >= state.N) {
-        exit(false, "Sei andato oltre l'ultima casella");
+        exit(false, "Sei andato oltre l'ultima parete");
       }
     }
     function controlla_indice() {
@@ -41,7 +41,7 @@
   message0: N
   output: Number
   colour: 20
-  tooltip: CAMBIAMI
+  tooltip: il numero di pareti
   helpUrl: ""
   js: state.N
 
@@ -49,7 +49,7 @@
   message0: M
   output: Number
   colour: 20
-  tooltip: CAMBIAMI
+  tooltip: il numero di istruzioni
   helpUrl: ""
   js: state.M
 
@@ -66,24 +66,24 @@
   helpUrl: ""
   js: istruzione() == "%1"
 
-- type: colore casella
-  message0: la casella corrente è %1
+- type: colore parete
+  message0: la parete corrente è %1
   args0:
     - type: field_dropdown
       options:
         - [bianca, "W"]
-        - [nera, "B"]
+        - [colorata, "B"]
   output: Boolean
   colour: 20
-  tooltip: CAMBIAMI
+  tooltip: controlla il colore della parete davanti ad Allie
   js: colore() == "%1"
 
 - type: colora
-  message0: colora di nero
+  message0: colora la parete 
   colour: 20
   previousStatement: null
   nextStatement: null
-  tooltip: CAMBIAMI
+  tooltip: colora la parete davanti ad Allie
   js: colora();
 
 - type: avanza
@@ -91,7 +91,7 @@
   colour: 20
   previousStatement: null
   nextStatement: null
-  tooltip: CAMBIAMI
+  tooltip: passa alla parete successiva
   js: prossima_posizione();
 
 - type: prossima istruzione
@@ -99,7 +99,7 @@
   colour: 20
   previousStatement: null
   nextStatement: null
-  tooltip: CAMBIAMI
+  tooltip: passa all'istruzione successiva
   js: prossima_istruzione();
 
 - type: torna all'inizio
@@ -107,7 +107,7 @@
   colour: 20
   previousStatement: null
   nextStatement: null
-  tooltip: CAMBIAMI
+  tooltip: torna alla prima parete e alla prima istruzione
   js: |
     if(state.must_optimize) {
       exit(false, "Non puoi tornare all'inizio in questo livello");
@@ -120,7 +120,6 @@
   previousStatement: null
   colour: 20
   tooltip: termina il procedimento
-  helpUrl: ""
   js: |
     ok = true;
     for (i = 0; i < state.N; i++) {
@@ -130,6 +129,6 @@
       }
     }
     if (ok)
-      exit(true, "hai colorato bene le caselle, complimenti!");
+      exit(true, "hai colorato bene le pareti, complimenti!");
     else
-      exit(false, "le caselle non sono state colorate come dovevano");
+      exit(false, "le pareti non sono state colorate come voleva Carol");
