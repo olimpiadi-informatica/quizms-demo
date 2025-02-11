@@ -36,12 +36,11 @@ export default function Visualizer({ variables, state }) {
           overflow: "hidden",
           padding: "5px",
           textAlign: "center",
-          "border-radius": "10px",
+          borderRadius: "10px",
       }} x ={cell_side*(state.pos)} y={0} height={font_height*3} width={cell_side}>
         {range(state.M).map((i) => <Rectangle key={`instr-${i}`} 
           style={{
             border: "None",
-            fontSize: scale*font_height,
             textAlign: "center",
             fontSize: `${scale*font_height}px`,
             lineHeight: `${scale*font_height}px`,
