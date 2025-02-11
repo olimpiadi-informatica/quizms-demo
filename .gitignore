@@ -138,6 +138,7 @@ dist
 
 # QuizMS
 .firebase/
+.quizms/
 variants/
 export/
 serviceAccountKey.json
