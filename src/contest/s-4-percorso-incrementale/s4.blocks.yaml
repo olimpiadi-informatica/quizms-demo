@@ -1,0 +1,83 @@
+- type: start
+  message0: inizia qui
+  nextStatement: null
+  colour: 20
+  tooltip: L'esecuzione inizia da qui
+  helpUrl: ""
+  maxInstances: 1
+  js: ""
+
+- type: N
+  message0: N
+  output: Number
+  colour: 20
+  tooltip: CAMBIAMI
+  helpUrl: ""
+  js: state.N
+
+- type: M
+  message0: M
+  output: Number
+  colour: 20
+  tooltip: CAMBIAMI
+  helpUrl: ""
+  js: state.M
+
+- type: istruzione
+  message0: l'istruzione %1 è %2
+  args0:
+    - type: input_value
+      check: Integer
+      min: "1"
+      max: state.M
+    - type: field_dropdown
+      options:
+        - [A, "A"]
+        - [S, "S"]
+  output: Boolean
+  colour: 20
+  tooltip: CAMBIAMI
+  helpUrl: ""
+  js: state.instr[%1] == %2
+
+- type: casella nera
+  message0: la casella %1 è %2
+  args0:
+    - type: input_value
+      check: Integer
+      min: "1"
+      max: state.N
+    - type: field_dropdown
+      options:
+        - [bianca, "0"]
+        - [nera, "2"]
+  output: Boolean
+  colour: 20
+  tooltip: CAMBIAMI
+  js: state.col[%1] == %2
+
+- type: colora
+  message0: colora di nero la casella %1
+  args0:
+    - type: input_value
+      check: Integer
+      min: "1"
+      max: state.N
+  colour: 20
+  previousStatement: null
+  nextStatement: null
+  tooltip: CAMBIAMI
+  js: state.col[%1] = "B";
+
+- type: termina
+  message0: termina
+  previousStatement: null
+  colour: 20
+  tooltip: termina il procedimento
+  helpUrl: ""
+  js: |
+    if (state.pos[0] < state.S)
+      exit(false, "la colonna di sinistra è troppo bassa");
+    if (state.pos[2] < state.D)
+      exit(false, "la colonna di destra è troppo bassa");
+    exit(true, "hai costruito bene le colonne, complimenti!");
