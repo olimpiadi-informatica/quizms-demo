@@ -17,7 +17,9 @@ const foods = import.meta.glob("./asy/cibo-*.asy", {
 
 export default function Visualizer({ variables, state }) {
   function position(x, cook) {
-    return [x === -1 ? 1.4 : cook ? 2.2 : 0.5 * x + 2.4, x === -1 ? 1.3 : cook ? 1.5 : 1.3];
+    if (x === -1) return [1.4, 1.3];
+    if (cook) return [2.2, 1.5];
+    return [0.5 * x + 2.4, 1.3];
   }
 
   return (
@@ -25,9 +27,8 @@ export default function Visualizer({ variables, state }) {
       <Canvas scale={130}>
         <Sprite src={bunny} alt="Tip-Tap" x={1.6} y={0.9} follow />
         <Sprite src={stoveBack} alt="Fornello" x={2.2} y={1.5} />
-        {range(state.N - Math.max(state.pos - 1, 0)).map((x) => {
-          const i = Math.max(state.pos - 1, 0) + x;
-          const pos = position(state.pos === 0 ? x : x - 1, state.queue[i].endsWith(" cotta"));
+        {range(Math.max(state.pos - 1, 0), state.N).map((i) => {
+          const pos = position(i - state.pos, state.queue[i].endsWith(" cotta"));
           return (
             <Sprite
               key={i}
