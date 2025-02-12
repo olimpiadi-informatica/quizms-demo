@@ -4,7 +4,7 @@ import Contest from "./contest/contest.mdx";
 import Header from "./header.md";
 
 export const metadata = {
-  title: "Fibonacci 2024/25",
+  title: "Giochi di Fibonacci",
   description: "Giochi di Fibonacci 2024/2025 - Fase 2",
 };
 
