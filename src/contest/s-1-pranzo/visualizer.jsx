@@ -48,7 +48,7 @@ export default function Visualizer({ variables, state }) {
           y={1.5}
         />
       </Canvas>
-      <Variables variables={{ ...variables, N: state.N }} />
+      <Variables variables={{ ...variables, "N (num. cibi)": state.N }} />
     </>
   );
 }

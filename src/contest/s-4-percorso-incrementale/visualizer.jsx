@@ -86,8 +86,8 @@ export default function Visualizer({ variables, state }) {
       <Variables
         variables={{
           ...variables,
-          "numero di caselle": state.N,
-          "numero di istruzioni": state.M,
+          "N (num. caselle)": state.N,
+          "M (num. istruzioni)": state.M,
         }}
       />
     </>

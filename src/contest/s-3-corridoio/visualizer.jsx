@@ -91,7 +91,7 @@ export default function Visualizer({ variables, state }) {
       <Variables
         variables={{
           ...variables,
-          N: state.N,
+          "N (num. stanze)": state.N,
         }}
       />
     </>
