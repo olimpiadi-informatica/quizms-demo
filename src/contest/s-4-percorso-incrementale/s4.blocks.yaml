@@ -8,12 +8,12 @@
   js: |
     function controlla_posizione() {
       if(state.pos >= state.N) {
-        exit(false, "Sei andato oltre l'ultima parete");
+        exit(false, "sei andato oltre l'ultima parete");
       }
     }
     function controlla_indice() {
       if (state.i >= state.M) {
-        exit(false, "Sei andato oltre l'ultima istruzione");
+        exit(false, "sei andato oltre l'ultima istruzione");
       }
     }
     function colore() {
@@ -23,6 +23,8 @@
     function colora() {
       controlla_posizione();
       state.cols[state.pos] = "B";
+      if (state.cols[state.pos] !== state.solution[state.pos])
+        exit(false, "non dovevi colorare questa parete");
     }
     function prossima_posizione() {
       controlla_posizione();
@@ -110,7 +112,7 @@
   tooltip: torna alla prima parete e alla prima istruzione
   js: |
     if(state.must_optimize) {
-      exit(false, "Non puoi tornare all'inizio in questo livello");
+      exit(false, "non puoi tornare all'inizio in questo livello");
     }
     state.pos = 0;
     state.i = 0;
@@ -121,14 +123,7 @@
   colour: 20
   tooltip: termina il procedimento
   js: |
-    ok = true;
-    for (i = 0; i < state.N; i++) {
-      if (state.cols[i] !== state.solution[i]) {
-        ok = false;
-        break;
-      }
-    }
-    if (ok)
-      exit(true, "hai colorato bene le pareti, complimenti!");
-    else
-      exit(false, "le pareti non sono state colorate come voleva Carol");
+    for (i = 0; i < state.N; i++)
+      if (state.cols[i] !== state.solution[i])
+        exit(false, "non hai colorato la parete " + (i+1) + " come voleva Carol");
+    exit(true, "hai colorato bene le pareti, complimenti!");
