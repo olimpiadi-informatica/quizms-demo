@@ -35,3 +35,26 @@ In particolare, per completare l'ultimo livello, Allie non deve mai tornare indi
   testcases={testcases}
   visualizer={Visualizer}
 />
+
+> Un possibile programma che segue esattamente le istruzioni di Allie è il seguente:
+>
+> ![soluzione](partial.png)
+>
+> Per ogni $i$ da $1$ ad $M$, come prima cosa Carol esegue le prime $i$ istruzioni.
+> Questo viene fatto con un ciclo che per $i$ volte esegue la prossima istruzione:
+> avanza sempre di uno, e poi se l'istruzione è salta avanza ulteriormente finché
+> Carol si trova su di una parete colorata. Terminato il ciclo, Carol colora la parete
+> a cui è arrivata e poi riparte dall'inizio.
+>
+> Il procedimento indicato da Allie, tuttavia, non è molto efficiente! Carol può ottenere
+> lo stesso risultato precedente senza mai tornare indietro, con questo programma:
+>
+> ![soluzione](code.png)
+>
+> L'idea in questo programma è dopo aver seguito le prime $i$ istruzioni e colorato l'ultima
+> casella, se ripeto di nuovo le prime $i$ istruzioni, arrivo esattamente nello stesso punto
+> in cui già mi trovo! L'unica differenza è se l'ultima istruzione era **SALTA**, perché in quel
+> caso devo saltare anche la casella che ho appena colorato. Dopo aver fatto quello, posso
+> semplicemente passare alla prossima istruzione senza ripartire dall'inizio.
+>
+> [secondarie](secondarie.asy)

@@ -30,3 +30,25 @@ Aiuta Bunny a spegnere le luci e raggiungere gli amici, senza trovarsi mai al bu
   testcases={testcases}
   visualizer={Visualizer}
 />
+
+> Un possibile programma corretto è il seguente:
+>
+> ![soluzione](code.png)
+>
+> Come prima cosa, Bunny deve controllare che non siano rimaste luci accese sulla sua destra, e
+> percorre quindi tutte le stanze andando a destra fino alla penultima stanza (fermandosi quindi
+> quando la stanza corrente è la numero $N-1$). Prima di andare a destra deve però controllare
+> se la lampadina fosse spenta, accendendola quindi per evitare la sua paura del buio.
+>
+> Alla fine di questo primo ciclo, Bunny si troverà nella penultima stanza della fattoria, e può
+> cominciare a tornare indietro spendendo le luci dietro di sè. Procede quindi con un altro ciclo
+> in cui va a sinistra, fino alla prima stanza. Ad ogni passo controlla se la luce alla sua destra
+> (da dove proviene) è accesa, e in caso la spegne. Poi per evitare la paura del buio controlla anche
+> se la luce alla sua sinistra (dove vuole andare) è spenta, e in caso la accende.
+>
+> Alla fine del secondo ciclo, Bunny si troverà nella prima stanza della fattoria, avendo spento tutte
+> le altre luci eccetto quella della seconda stanza. Non dovrà quindi fare altro che spegnere la seconda
+> stanza, uscire, spegnere la luce nella prima stanza e poi raggiungere i suoi amici!
+>
+> [primarie](primarie.asy)
+> [secondarie](secondarie.asy)
