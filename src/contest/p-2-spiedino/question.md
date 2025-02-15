@@ -28,8 +28,8 @@ Quanto è il valore calcolato alla fine di questo procedimento?
 > 7. le due banane; e infine
 > 8. i sette pomodori.
 >
-> [primarie](primarie.asy)
-> [secondarie](secondarie.asy)
+> ![primarie](primarie1.asy)
+> ![secondarie](secondarie1.asy)
 
 ---
 
@@ -53,5 +53,5 @@ Quanti frutti dovrà modificare al minimo per ottenere questo risultato?
 >
 > ![soluzione](sol.asy)
 >
-> [primarie](primarie.asy)
-> [secondarie](secondarie.asy)
+> ![primarie](primarie2.asy)
+> ![secondarie](secondarie2.asy)

@@ -28,8 +28,8 @@ Se Bunny segue il procedimento qui sotto, riesce a raggiungere la bandierina?
 > A questo punto la roccia è grigia, e quindi avanza alla posizione 8.
 > Ma dato che la roccia lì è marrone, salta cadendo direttamente sulla *grande roccia* in posizione $10$.
 >
-> [primarie](primarie.asy)
-> [secondarie](secondarie.asy)
+> ![primarie](primarie1.asy)
+> ![secondarie](secondarie1.asy)
 
 ---
 
@@ -62,5 +62,5 @@ Quali di queste strategie gli consentono di raggiungere o superare il traguardo?
 > A quel punto salta ancora alla posizione $11$, per poi avanzare due volte fino alla posizione $13$.
 > Quindi salta in posizione $15$, e da lì avanza andando a scontrarsi contro la grande roccia.
 >
-> [primarie](primarie.asy)
-> [secondarie](secondarie.asy)
+> ![primarie](primarie2.asy)
+> ![secondarie](secondarie2.asy)
