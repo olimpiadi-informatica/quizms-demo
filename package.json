@@ -13,6 +13,7 @@
     "@olinfo/quizms-mdx": "^3.0.0-beta.0",
     "@olinfo/tailwind": "^0.1",
     "autoprefixer": "^10.4",
+    "lodash-es": "^4.17.21",
     "postcss": "^8.4",
     "react": "^19",
     "react-dom": "^19",
@@ -31,5 +32,12 @@
       "tailwindcss": {},
       "autoprefixer": {}
     }
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@firebase/util",
+      "@swc/core",
+      "sharp"
+    ]
   }
 }
