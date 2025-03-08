@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@olinfo/quizms": "^3.0.0-beta.0",
-    "@olinfo/quizms-mdx": "^3.0.0-beta.0",
+    "@olinfo/quizms-mdx": "3.0.0-beta.7",
     "@olinfo/tailwind": "^0.1",
     "autoprefixer": "^10.4",
     "lodash-es": "^4.17.21",
@@ -35,9 +35,16 @@
   },
   "pnpm": {
     "onlyBuiltDependencies": [
+      "@biomejs/biome",
       "@firebase/util",
       "@swc/core",
+      "esbuild",
+      "protobufjs",
       "sharp"
-    ]
+    ],
+    "overrides": {
+      "@olinfo/quizms": "link:../../../../../../../.local/share/pnpm/global/5/node_modules/@olinfo/quizms",
+      "@olinfo/quizms-mdx": "link:../../../../../../../.local/share/pnpm/global/5/node_modules/@olinfo/quizms-mdx"
+    }
   }
 }
