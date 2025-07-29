@@ -11,16 +11,16 @@ element P = row(
     BLOCK_PADDING,
     fill_space=0,
     block_sequence(
-        instr_block(element("imposta"), choice_block(e("valore")), element("a"), data_block(e("1"))),
-        instr_block(element("imposta"), choice_block(e("i")), element("a"), data_block(e("1"))),
+        instr_block(element("set"), choice_block(e("value")), element("to"), data_block(e("1"))),
+        instr_block(element("set"), choice_block(e("i")), element("to"), data_block(e("1"))),
         for_block(
-            block_content(e("ripeti"), data_block(e("24")), e("volte:")),
+            block_content(e("repeat"), data_block(e("24")), e("times:")),
             block_sequence(
                 if_block(
-                    block_content(e("se"), cond_block(data_block(e("cibo in posizione"), data_block(e("i"))), e("è diverso da"), data_block(e("cibo in posizione"), data_block(data_block(e("i")), e("+"), data_block(e("1")))))),
-                    instr_block(e("aumenta"), choice_block(e("valore")), element("di"), data_block(e("1")))
+                    block_content(e("if"), cond_block(data_block(e("food in position"), data_block(e("i"))), e("not equal"), data_block(e("food in position"), data_block(data_block(e("i")), e("+"), data_block(e("1")))))),
+                    instr_block(e("increase"), choice_block(e("value")), element("by"), data_block(e("1")))
                 ),
-                instr_block(e("aumenta"), choice_block(e("i")), element("di"), data_block(e("1")))
+                instr_block(e("increase"), choice_block(e("i")), element("by"), data_block(e("1")))
             )
         )
     )

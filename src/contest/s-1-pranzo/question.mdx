@@ -3,18 +3,18 @@ import customBlocks from "./s1.blocks.yaml";
 import testcases from "./testcases.py";
 import Visualizer from "./visualizer.jsx";
 
-Tip-Tap deve preparare il pranzo ed ha allineato $N$ cibi che vuole mangiare.
-Ogni cibo è una verdura o un frutto, e Tip-Tap vuole solo mangiare **frutta cruda** e **verdura cotta**.
-Hai a disposizione questi blocchi:
+Tip-Tap has to prepare lunch and has lined up $N$ foods he wants to eat.
+Each food is a vegetable or a fruit, and Tip-Tap only wants to eat **raw fruit** and **cooked vegetables**.
+You have these blocks available:
 
-- `N`: il numero di cibi che Tip-Tap ha allineato.
-- `prossimo cibo`: il prossimo cibo che Tip-Tap non ha ancora mangiato.
-- $x$ `è una verdura`: vero se il cibo $x$ è una verdura.
-- `cuoci` $x$: cuoci il cibo $x$.
-- `mangia` $x$: mangia il cibo $x$.
-- `termina`: smetti di mangiare.
+  - `N`: the number of foods that Tip-Tap has lined up.
+  - `next food`: the next food that Tip-Tap hasn't eaten yet.
+  - $x$ `is a vegetable`: true if food $x$ is a vegetable.
+  - `cook` $x$: cook food $x$.
+  - `eat` $x$: eat food $x$.
+  - `terminate`: stop eating.
 
-Scrivi un programma che consenta a Tip-Tap di pranzare come più preferisce!
+Write a program that allows Tip-Tap to have lunch in the way he likes!
 
 <Blockly
   customBlocks={customBlocks}
@@ -23,14 +23,10 @@ Scrivi un programma che consenta a Tip-Tap di pranzare come più preferisce!
   visualizer={Visualizer}
 />
 
-> Un possibile programma corretto è il seguente:
+> A possible correct program is the following:
 >
-> ![soluzione](code.png)
+> ![solution](code.png)
 >
-> Secondo questo programma, per ognuno degli $N$ cibi che Tip-Tap vuole mangiare, il protagonista
-> controlla se il prossimo cibo è una verdura, e in caso affermativo la cuoce prima di mangiarla.
-> A questo punto mangia il prossimo cibo (che sia verdura o frutta), che sarà di suo gradimento:
-> verdura cotta o frutta cruda.
->
-> ![primarie](primarie.asy)
-> ![secondarie](secondarie.asy)
+> According to this program, for each of the $N$ foods Tip-Tap wants to eat, the protagonist checks if
+> the next food is a vegetable, and if so, cooks it before eating it. At this point he eats the next food
+> (whether it's a vegetable or a fruit), which will be to his liking: cooked vegetable or raw fruit.

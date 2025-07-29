@@ -1,57 +1,39 @@
-Allie ha preparato un lungo spiedino di 25 gustosi cibi:
+Allie has prepared a long skewer with 25 tasty foods:
 
-![spiedino](fig.asy)
+![skewer](fig.asy)
 
-Ora deve determinare il **valore** dello spiedino per portarlo al mercato. Per calcolarlo, deve seguire questo procedimento:
+Now she needs to determine the **value** of the skewer to take it to the market. To calculate it, she must follow this procedure:
 
 ![code](code.asy)
 
-Quanto è il valore calcolato alla fine di questo procedimento?
+What is the value calculated at the end of this procedure?
 
-- [ ] 4
-- [x] 8
-- [ ] 12
-- [ ] 18
-- [ ] 25
+?> 8
 
-> Ragionando sul programma di Allie, si può vedere che con un ciclo percorre tutti i valori $i$ da $1$ a $24$,
-> esaminando per ciascuno se i cibi nelle posizioni $i$ e $i+1$ sono diversi. In altre parole, Allie sta
-> esaminando tutte le coppie di cibi vicini, contando quante sono diverse. Questo in pratica conta quanti
-> diverse zone di frutta uguale ci sono sullo spiedino, che sono 8:
-> 
-> 1. le due patate;
-> 2. la mela;
-> 3. le due carote;
-> 4. le cinque fette di anguria;
-> 5. le due melanzane;
-> 6. le quattro fragole;
-> 7. le due banane; e infine
-> 8. i sette pomodori.
+> Reasoning about Allie's program, one can see that it loops through all values $i$ from $1$ to $24$, examining for each whether the foods in positions $i$ and $i+1$ are different. In other words, Allie is examining all pairs of neighboring foods, counting how many are different. This practically counts how many different zones of identical foods there are on the skewer, which are 8:
 >
-> ![primarie](primarie1.asy)
-> ![secondarie](secondarie1.asy)
+> 1.  the two potatoes;
+> 2.  the apple;
+> 3.  the two carrots;
+> 4.  the five watermelon slices;
+> 5.  the two eggplants;
+> 6.  the four strawberries;
+> 7.  the two bananas; and finally
+> 8.  the seven tomatoes.
 
----
+-----
 
-Carol sta pensando che gli piacerebbe cambiare un po' il suo spiedino, di modo che il suo valore aumenti di $5$.
-Quanti frutti dovrà modificare al minimo per ottenere questo risultato?
+Allie is now thinking that she would like to change her skewer a bit, so that its value increases by $5$. How many foods will she need to modify at minimum to achieve this result?
 
-- [ ] 2
-- [x] 3
-- [ ] 4
-- [ ] 5
-- [ ] 6
+?> 3
 
-> Possiamo creare $5$ zone di frutta in più cambiando solo tre frutti.
-> Con un singolo frutto possiamo spezzare una zona che sia lunga almeno tre per farla diventare tre zone.
-> Questa cosa possiamo farla due volte per aumentare il valore di $4$, per esempio sostituendo
-> una fetta di anguria nel mezzo con una patata e una delle fragole nel mezzo con una mela.
-> 
-> A questo punto dobbiamo ancora aumentare il valore di $1$. Questo possiamo farlo sostituendo un cibo
-> alla fine della zona con un'altro diverso: per esempio sostituendo una banana con una carota.
-> Questo sarebbe il risultato finale:
+> We can create $5$ more food zones by changing only three foods.
+> With a single food we can break a zone that is at least three long to make it become three zones.
+> We can do this twice to increase the value by $4$, for example by replacing
+> a watermelon slice in the middle with a potato and one of the strawberries in the middle with an apple.
 >
-> ![soluzione](sol.asy)
+> At this point we still need to increase the value by $1$. We can do this by replacing a food
+> at the end of a zone with a different one: for example, replacing a banana with a carrot.
+> This would be the final result:
 >
-> ![primarie](primarie2.asy)
-> ![secondarie](secondarie2.asy)
+> ![solution](sol.asy)

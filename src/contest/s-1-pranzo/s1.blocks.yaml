@@ -1,8 +1,8 @@
 - type: start
-  message0: inizia qui
+  message0: start here
   nextStatement: null
   colour: 20
-  tooltip: L'esecuzione inizia da qui
+  tooltip: Execution starts here
   helpUrl: ""
   maxInstances: 1
   js: ""
@@ -11,90 +11,90 @@
   message0: N
   output: Number
   colour: 20
-  tooltip: numero di cibi in fila
+  tooltip: number of food items in the row
   helpUrl: ""
   js: state.N
 
-- type: prossimo cibo
-  message0: prossimo cibo
+- type: next food
+  message0: next food
   output: String
   colour: 20
-  tooltip: il prossimo cibo in fila
+  tooltip: the next food in the row
   helpUrl: ""
   js: |
-    state.pos < state.N ? state.queue[state.pos] : exit(false, "il cibo è finito")
+    state.pos < state.N ? state.queue[state.pos] : exit(false, "the food is finished")
 
-- type: è una verdura
-  message0: "%1 è una verdura"
+- type: is a vegetable
+  message0: "%1 is a vegetable"
   args0:
     - type: input_value
       check: String
   output: Boolean
   colour: 20
-  tooltip: se il cibo dato è una verdura
+  tooltip: whether the given food is a vegetable
   helpUrl: ""
   js: |
     (function(x) {
       food = x.split(" ")[0];
       if (food in state.food_types)
         return state.food_types[food] === "verdura";
-      exit(false, "non conosco il cibo " + x);
+      exit(false, "unknown food " + x);
     })(%1)
 
-- type: cuoci
-  message0: cuoci %1
+- type: cook
+  message0: cook %1
   args0:
     - type: input_value
       check: String
   previousStatement: null
   nextStatement: null
   colour: 20
-  tooltip: cuoci il cibo dato
+  tooltip: cook the given food
   helpUrl: ""
   js: |
     (function(x) {
       if (state.pos >= state.N)
-        exit(false, "hai finito il cibo");
+        exit(false, "the food is finished");
       if (state.queue[state.pos] !== x)
-        exit(false, "questo non è il prossimo cibo");
+        exit(false, "this is not the next food");
       if (state.queue[state.pos].split(" ").length > 1)
-        exit(false, "stai cuocendo un cibo già cotto");
+        exit(false, "you are trying to cook something that is already cooked");
       state.queue[state.pos] += " cotta";
     })(%1);
 
-- type: mangia
-  message0: mangia %1
+- type: eat
+  message0: eat %1
   args0:
     - type: input_value
       check: String
   previousStatement: null
   nextStatement: null
   colour: 20
-  tooltip: mangia il cibo dato
+  tooltip: eat the given food
   helpUrl: ""
   js: |
     (function(x) {
       if (state.pos >= state.N)
-        exit(false, "hai finito il cibo");
+        exit(false, "the food is finished");
       if (state.queue[state.pos] !== x)
-        exit(false, "questo non è il prossimo cibo");
+        exit(false, "this is not the next food");
       food = state.queue[state.pos].split(" ");
       if (!(food[0] in state.food_types))
-        exit(false, "non conosco il cibo " + food[0]);
+        exit(false, "unknown food " + food[0]);
       if (state.food_types[food[0]] == "verdura" && food.length == 1)
-        exit(false, "a Tip-Tap non piace la verdura cruda");
+        exit(false, "Tip-Tap doesn't like raw vegetables");
       if (state.food_types[food[0]] == "frutta" && food.length > 1)
-        exit(false, "a Tip-Tap non piace la frutta cotta");
+        exit(false, "a Tip-Tap doesn't like cooked fruits");
       state.pos += 1;
     })(%1);
 
-- type: termina
-  message0: termina
+- type: terminate
+  message0: terminate
   previousStatement: null
   colour: 20
-  tooltip: smetti di mangiare
+  tooltip: finish eating
   helpUrl: ""
   js: |
     if (state.pos < state.N)
-      exit(false, "non hai finito il cibo");
-    exit(true, "hai finito tutto il cibo, complimenti!");
+      exit(false, "you didn't finish all the food");
+    exit(true, "you finished all the food, congrats!");

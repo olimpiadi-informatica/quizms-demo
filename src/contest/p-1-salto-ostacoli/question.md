@@ -1,66 +1,59 @@
-Bunny è ormai appassionato di percorsi ad ostacoli, e si trova quindi ora sulla casella $1$ di questo nuovo percorso:
+Bunny is passionate about obstacle courses! He is currently on position $1$ of this course:
 
 ![fig](fig.asy)
 
-Come sempre, il suo obbiettivo è **raggiungere o superare** la casella numero $17$ dove c'è la bandierina del traguardo.
-Bunny può fare le seguenti cose:
-+ **avanza**: Bunny avanza alla casella successiva;
-+ **salta**: Bunny supera la casella successiva con un salto, atterrando su quella dopo;
-+ **posizione**: la posizione corrente di Bunny;
-+ **traguardo**: la posizione del traguardo;
-+ **pietra marrone**: vero se Bunny si trova ora su una pietra marrone.
+His goal is to **reach or exceed** position number $17$ where the finish flag is.
+Bunny can run the following blocks:
 
-Come nell'ultimo percorso ad ostacoli, sul percorso ci sono delle *grandi rocce*! Bunny non può arrivare su una casella occupata da una *grande roccia*, altrimenti cadrebbe, ma può superarla grazie ad un'azione **salta**.
-Se Bunny segue il procedimento qui sotto, riesce a raggiungere la bandierina?
+  - **advance**: Bunny advances to the next position;
+  - **jump**: Bunny skips the next position with a jump, landing on the one after it;
+  - **position**: Bunny's current position;
+  - **finish line**: the position of the finish line;
+  - **brown stone**: true if Bunny is currently on a brown stone.
+
+However, there are *large rocks* on the course! Bunny cannot land on a position occupied by a *large rock*, otherwise he would fall, but he can overcome it with a **jump** action.
+If Bunny follows the procedure below, can he reach the flag?
 
 ![code](code.asy)
 
-- [ ] no, perchè si ferma prima di arrivare al traguardo senza cadere
-- [ ] si, raggiunge o supera la bandierina
-- [ ] no, perchè cade sulla *grande roccia* in posizione $4$
-- [X] no, perchè cade sulla *grande roccia* in posizione $10$
-- [ ] no, perchè cade sulla *grande roccia* in posizione $16$
+  - [ ] no, because he stops before reaching the finish line without falling
+  - [ ] yes, he reaches or exceeds the finish line
+  - [ ] no, because he falls on the *large rock* in position $4$
+  - [X] no, because he falls on the *large rock* in position $10$
+  - [ ] no, because he falls on the *large rock* in position $16$
 
-> Bunny cade sulla *grande roccia* in posizione $10$.
+> Bunny falls on the *large rock* in position $10$.
 >
-> Inizialmente si trova su una roccia marrone, e quindi salta arrivando in posizione $3$.
-> Anche lì la roccia è marrone quindi salta di nuovo fino in posizione 5, e ancora una volta fino in posizione 7.
-> A questo punto la roccia è grigia, e quindi avanza alla posizione 8.
-> Ma dato che la roccia lì è marrone, salta cadendo direttamente sulla *grande roccia* in posizione $10$.
->
-> ![primarie](primarie1.asy)
-> ![secondarie](secondarie1.asy)
+> Initially, he is on a brown rock, and therefore jumps, arriving at position $3$.
+> There too the rock is brown, so he jumps again to position 5, and once more to position 7.
+> At this point the rock is gray, and so he advances to position 8.
+> But since the rock there is brown, he jumps, falling directly onto the *large rock* in position $10$.
 
----
+-----
 
-Sempre nello stesso percorso ad ostacoli, Bunny vuole provare un po' di strategie diverse:
+Still on the same obstacle course, Bunny wants to try out few different strategies:
 
 ![fig](fig.asy)
 
 ![code](code-alt.asy)
 
-Quali di queste strategie gli consentono di raggiungere o superare il traguardo?
+Which of these strategies would allow him to reach or exceed the finish line? Select **all** correct answers:
 
+  - [ ] none of the strategies above
+  - [x] strategy 1 works
+  - [x] strategy 2 works
+  - [ ] strategy 3 works
 
-- [ ] la strategia 1
-- [ ] la strategia 2
-- [ ] la strategia 3
-- [x] le strategie 1 e 2
-- [ ] le strategie 2 e 3
-
-> Funzionano entrambe le strategie 1 e 2.
+> Both strategies 1 and 2 work.
 >
-> Nella strategia 2 Bunny salta sempre, toccando tutte le posizioni dispari e quindi evitando tutte le grandi rocce,
-> che si trovano invece in posizioni pari, fino ad arrivare al traguardo in posizione $17$.
+> In strategy 2, Bunny always jumps, touching all odd positions and thus avoiding all large rocks,
+> which are instead in even positions, until he reaches the finish line in position $17$.
 >
-> Nella strategia 1, Bunny fa i salti a coppie: questo lo porta attraverso le posizioni $5$, $9$ e $13$, che hanno tutte
-> la roccia marrone, per poi arrivare sul traguardo in posizione $17$ senza aver mai fatto avanza.
+> In strategy 1, Bunny jumps in pairs: this leads him through positions $5$, $9$, and $13$, all of which have
+> brown rocks, and then he reaches the finish line in position $17$ without ever advancing.
 >
-> Nella strategia 3, invece, Bunny cade sulla roccia $16$.
-> Inizia saltando sulle rocce marroni in posizione $3$ e $5$ per arrivare alla posizione $7$.
-> Da lì avanza due volte alla posizione $9$.
-> A quel punto salta ancora alla posizione $11$, per poi avanzare due volte fino alla posizione $13$.
-> Quindi salta in posizione $15$, e da lì avanza andando a scontrarsi contro la grande roccia.
->
-> ![primarie](primarie2.asy)
-> ![secondarie](secondarie2.asy)
+> In strategy 3, however, Bunny falls on rock $16$.
+> He starts by jumping on the brown rocks in positions $3$ and $5$ to reach position $7$.
+> From there he advances twice to position $9$.
+> At that point he jumps again to position $11$, and then advances twice to position $13$.
+> Then he jumps to position $15$, and from there he advances, colliding with the large rock.

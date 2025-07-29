@@ -11,38 +11,38 @@ BLOCK_PADDING = .3;
 element P =
     row(2, 0, (0.5,0.5),
         block_sequence(
-            start_block(e("Strategia 1")),
+            start_block(e("Strategy 1")),
             for_block(
-                block_content(e("ripeti mentre"), cond_block(data_block(e("posizione")), e("minore di"), data_block(e("traguardo"))), e(":")),
+                block_content(e("repeat while"), cond_block(data_block(e("position")), e("less than"), data_block(e("finish line"))), e(":")),
                 else_block(
-                    block_content(e("se"), cond_block(e("pietra marrone"))),
+                    block_content(e("if"), cond_block(e("brown stone"))),
                     block_sequence(
-                        instr_block(element("salta")),
-                        instr_block(element("salta"))
+                        instr_block(element("jump")),
+                        instr_block(element("jump"))
                     ),
-                    block_content(e("altrimenti: ")),
-                    instr_block(element("avanza"))
+                    block_content(e("otherwise: ")),
+                    instr_block(element("advance"))
                 )
             )
         ),
         block_sequence(
-            start_block(e("Strategia 2")),
+            start_block(e("Strategy 2")),
             for_block(
-                block_content(e("ripeti mentre"), cond_block(data_block(e("posizione")), e("minore di"), data_block(e("traguardo"))), e(":")),
-                instr_block(e("salta"))
+                block_content(e("repeat while"), cond_block(data_block(e("position")), e("less than"), data_block(e("finish line"))), e(":")),
+                instr_block(e("jump"))
             )
         ),
         block_sequence(
-            start_block(e("Strategia 3")),
+            start_block(e("Strategy 3")),
             for_block(
-                block_content(e("ripeti mentre"), cond_block(data_block(e("posizione")), e("minore di"), data_block(e("traguardo"))), e(":")),
+                block_content(e("repeat while"), cond_block(data_block(e("position")), e("less than"), data_block(e("finish line"))), e(":")),
                 else_block(
-                    block_content(e("se"), cond_block(e("pietra marrone"))),
-                    instr_block(element("salta")),
-                    block_content(e("altrimenti: ")),
+                    block_content(e("if"), cond_block(e("brown stone"))),
+                    instr_block(element("jump")),
+                    block_content(e("otherwise: ")),
                     block_sequence(
-                        instr_block(element("avanza")),
-                        instr_block(element("avanza"))
+                        instr_block(element("advance")),
+                        instr_block(element("advance"))
                     )
                 )
             )

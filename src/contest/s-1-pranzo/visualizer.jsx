@@ -26,7 +26,7 @@ export default function Visualizer({ variables, state }) {
     <>
       <Canvas scale={130}>
         <Sprite src={bunny} alt="Tip-Tap" x={1.6} y={0.9} follow />
-        <Sprite src={stoveBack} alt="Fornello" x={2.2} y={1.5} />
+        <Sprite src={stoveBack} alt="Stove Back" x={2.2} y={1.5} />
         {range(Math.max(state.pos - 1, 0), state.N).map((i) => {
           const pos = position(i - state.pos, state.queue[i].endsWith(" cotta"));
           return (
@@ -43,12 +43,12 @@ export default function Visualizer({ variables, state }) {
           src={
             state.pos < state.N && state.queue[state.pos].endsWith(" cotta") ? stoveOn : stoveOff
           }
-          alt="Fornello"
+          alt="Stove"
           x={2.2}
           y={1.5}
         />
       </Canvas>
-      <Variables variables={{ ...variables, "N (num. cibi)": state.N }} />
+      <Variables variables={{ ...variables, "N (food num.)": state.N }} />
     </>
   );
 }

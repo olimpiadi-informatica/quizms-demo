@@ -3,26 +3,25 @@ import customBlocks from "./s3.blocks.yaml";
 import testcases from "./testcases.py";
 import Visualizer from "./visualizer.jsx";
 
-Bunny oggi è rimasto a studiare fino a tarda notte nella sua stanza, mentre i suoi amici hanno già iniziato a fare cena insieme intorno al fuoco in giardino.
-Ora Bunny li vuole raggiungere, però c'è un problema: ha paura del buio, quindi non è disposto ad entrare in una stanza se prima non ne accende la luce.
-D'altra parte, Bunny è anche molto attento all'ambiente e non vuole lasciare luci accese prima di uscire fuori... neanche quelle che i suoi amici hanno
-dimenticato accese!
+Bunny stayed up late studying in his room tonight, while his friends have already started dinner together around the campfire in the garden.
+Now Bunny wants to join them, but there's a problem: he's afraid of the dark, so he's not willing to enter a room unless he turns on the light first.
+On the other hand, Bunny is also very environmentally conscious and doesn't want to leave lights on before going outside... not even those his friends forgot to turn off!
 
-La Fattoria Fibonacci è fatta da $N$ stanze disposte in fila, come un lungo corridoio, separate da porte e numerate $1$, $2$, $\ldots$, $N$.
-L'esterno della fattoria viene rappresentato come la stanza numero zero.
-In ogni stanza ci sono due interruttori, che servono per accendere le lampadine delle stanze a destra e a sinistra.
-Il lampadario della prima stanza si può anche spegnere dall'esterno.
-Quando un interruttore viene premuto, accende la lampadina se è spenta e la spegne se è accesa.
-Hai a disposizione questi blocchi:
+Bunny's farm is made up of $N$ rooms arranged in a row, like a long corridor, separated by doors and numbered $1$, $2$, $\ldots$, $N$.
+The garden outside of the farm is represented as room number zero.
+In each room there are two switches, which are used to turn on the lights in the rooms to the right and left.
+The light in the first room can also be turned on and off from the outside.
+When a switch is pressed, it turns the light on if it is off, and turns it off if it is on.
+You have these blocks available:
 
-- `N`: il numero di stanze.
-- `stanza corrente`: il numero della stanza corrente, $0$ (esterno) oppure da $1$ a $N$ (stanze).
-- `muovi a destra/sinistra`: spostati nella stanza a destra/sinistra della stanza corrente.
-- `interruttore a destra/sinistra`: premi l'interruttore che comanda la stanza a destra/sinistra.
-- `lampadina a destra/sinistra accesa`: vero se la lampadina nella stanza a destra/sinistra è accesa.
-- `termina`: raggiungi i tuoi amici per la cena intorno al fuoco.
+  - `N`: the number of rooms.
+  - `current room`: the current room number, $0$ (outside) or $1$ to $N$ (rooms).
+  - `move right/left`: move to the room to the right/left of the current room.
+  - `press the right/left switch`: press the switch that controls the room to the right/left.
+  - `right/left light on/off`: true if the light in the room to the right/left is on/off.
+  - `terminate`: reach your friends for dinner around the campfire.
 
-Aiuta Bunny a spegnere le luci e raggiungere gli amici, senza trovarsi mai al buio!
+Help Bunny turn off the lights and reach his friends, without ever being in the dark! 
 
 <Blockly
   customBlocks={customBlocks}
@@ -31,23 +30,20 @@ Aiuta Bunny a spegnere le luci e raggiungere gli amici, senza trovarsi mai al bu
   visualizer={Visualizer}
 />
 
-> Un possibile programma corretto è il seguente:
+> A possible correct program is the following:
 >
-> ![soluzione](code.png)
+> ![solution](code.png)
 >
-> Come prima cosa, Bunny deve controllare che non siano rimaste luci accese sulla sua destra, e
-> percorre quindi tutte le stanze andando a destra fino all'ultima stanza (numero $N$).
-> Prima di andare a destra deve però controllare se la lampadina fosse spenta, 
-> accendendola quindi per evitare la sua paura del buio.
+> First, Bunny must check that no lights are still on to his right, and
+> then he walks through all the rooms going to the right until the last room (number $N$).
+> Before going right, however, he must check if the light was off,
+> turning it on to avoid his fear of the dark.
 >
-> Alla fine di questo primo ciclo, Bunny si troverà nell'ultima stanza della fattoria, e può
-> cominciare a tornare indietro spegnendo le luci dietro di sè. Procede quindi con un altro ciclo
-> in cui va a sinistra, come sempre controllando prima se la luce alla sua sinistra (dove vuole andare)
-> è spenta, e in caso la accende. Dopo essersi spostato a sinistra, spegne la luce della stanza
-> da cui è arrivato.
+> At the end of this first loop, Bunny will be in the last room of the farm, and can
+> start going back, turning off the lights behind him. He then proceeds with another loop
+> where he goes left, as always checking first if the light to his left (where he wants to go)
+> is off, and if so, he turns it on. After moving left, he turns off the light in the room
+> he came from.
 >
-> Questo secondo ciclo termina quando Bunny è arrivato nella prima stanza della fattoria, avendo spento tutte
-> le altre luci. Non dovrà quindi fare altro che uscire, spegnere la luce nella prima stanza e poi raggiungere i suoi amici!
->
-> ![primarie](primarie.asy)
-> ![secondarie](secondarie.asy)
+> This second loop ends when Bunny has reached the first room of the farm, having turned off all
+> the other lights. He will then only have to exit, turn off the light in the first room, and then reach his friends!

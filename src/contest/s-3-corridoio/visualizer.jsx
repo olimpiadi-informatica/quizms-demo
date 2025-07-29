@@ -18,7 +18,6 @@ import switchOnOff from "./asy/switch-on-off.asy?w=30";
 import switchOnOn from "./asy/switch-on-on.asy?w=30";
 
 export default function Visualizer({ variables, state }) {
-  // const teams = [fibonacci, turing];
 
   const height = 24;
   const width = 18;
@@ -73,9 +72,9 @@ export default function Visualizer({ variables, state }) {
         {range(state.N).map((i) => (
           <Fragment key={"door" + i}>
             {state.door[i] ? (
-              <Sprite src={openedDoor} alt="Porta aperta" x={width * (i + 1) - 1.5} y={3} />
+              <Sprite src={openedDoor} alt="open door" x={width * (i + 1) - 1.5} y={3} />
             ) : (
-              <Sprite src={closedDoor} alt="Porta chiusa" x={width * (i + 1) - 4} y={0} />
+              <Sprite src={closedDoor} alt="closed door" x={width * (i + 1) - 4} y={0} />
             )}
           </Fragment>
         ))}
@@ -91,7 +90,7 @@ export default function Visualizer({ variables, state }) {
       <Variables
         variables={{
           ...variables,
-          "N (num. stanze)": state.N,
+          "N (room num.)": state.N,
         }}
       />
     </>
