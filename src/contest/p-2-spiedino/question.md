@@ -8,7 +8,11 @@ Now she needs to determine the **value** of the skewer to take it to the market.
 
 What is the value calculated at the end of this procedure?
 
+:::answers{.open}
+
 ?> 8
+
+:::
 
 > Reasoning about Allie's program, one can see that it loops through all values $i$ from $1$ to $24$, examining for each whether the foods in positions $i$ and $i+1$ are different. In other words, Allie is examining all pairs of neighboring foods, counting how many are different. This practically counts how many different zones of identical foods there are on the skewer, which are 8:
 >
@@ -25,7 +29,11 @@ What is the value calculated at the end of this procedure?
 
 Allie is now thinking that she would like to change her skewer a bit, so that its value increases by $5$. How many foods will she need to modify at minimum to achieve this result?
 
+:::answers{.open}
+
 ?> 3
+
+:::
 
 > We can create $5$ more food zones by changing only three foods.
 > With a single food we can break a zone that is at least three long to make it become three zones.

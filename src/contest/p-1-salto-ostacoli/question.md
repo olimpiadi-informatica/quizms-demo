@@ -16,11 +16,15 @@ If Bunny follows the procedure below, can he reach the flag?
 
 ![code](code.asy)
 
+:::answers{.anyCorrect}
+
   - [ ] no, because he stops before reaching the finish line without falling
   - [ ] yes, he reaches or exceeds the finish line
   - [ ] no, because he falls on the *large rock* in position $4$
   - [X] no, because he falls on the *large rock* in position $10$
   - [ ] no, because he falls on the *large rock* in position $16$
+
+:::
 
 > Bunny falls on the *large rock* in position $10$.
 >
@@ -39,10 +43,14 @@ Still on the same obstacle course, Bunny wants to try out few different strategi
 
 Which of these strategies would allow him to reach or exceed the finish line? Select **all** correct answers:
 
+:::answers{.allCorrect}
+
   - [ ] none of the strategies above
   - [x] strategy 1 works
   - [x] strategy 2 works
   - [ ] strategy 3 works
+
+:::
 
 > Both strategies 1 and 2 work.
 >
