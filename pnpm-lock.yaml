@@ -13,11 +13,11 @@ importers:
   .:
     dependencies:
       '@olinfo/quizms':
-        specifier: link:../../../../../../../.local/share/pnpm/global/5/node_modules/@olinfo/quizms
-        version: link:../../../../../../../.local/share/pnpm/global/5/node_modules/@olinfo/quizms
+        specifier: link:../../../../.local/share/pnpm/global/5/node_modules/@olinfo/quizms
+        version: link:../../../../.local/share/pnpm/global/5/node_modules/@olinfo/quizms
       '@olinfo/quizms-mdx':
-        specifier: link:../../../../../../../.local/share/pnpm/global/5/node_modules/@olinfo/quizms-mdx
-        version: link:../../../../../../../.local/share/pnpm/global/5/node_modules/@olinfo/quizms-mdx
+        specifier: link:../../../../.local/share/pnpm/global/5/node_modules/@olinfo/quizms-mdx
+        version: link:../../../../.local/share/pnpm/global/5/node_modules/@olinfo/quizms-mdx
       '@olinfo/tailwind':
         specifier: ^0.1
         version: 0.1.0(postcss@8.5.3)
