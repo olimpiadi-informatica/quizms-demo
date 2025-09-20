@@ -1,0 +1,18 @@
+[demo]
+name = "Quizms demo"
+long_name = "Demo di Quizms"
+problem_ids = [1.1, 1.2, 2.1, 2.2, 3]
+user_data = [
+    { name = "surname",      label = "Cognome",         type = "text",   pinned = true },
+    { name = "name",         label = "Nome",            type = "text" },
+]
+has_variants = false
+has_online = true
+has_pdf = false
+allow_student_import = false
+allow_student_edit = true
+allow_answer_edit = false
+contest_window_start = 2025-02-13T07:00:00
+contest_window_end = 2025-02-13T16:00:00
+duration = 120
+allow_restart = true

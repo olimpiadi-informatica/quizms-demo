@@ -1,20 +1,20 @@
 import initialBlocks from "./initial-blocks.json";
-import customBlocks from "./s1.blocks.yaml";
+import customBlocks from "./s1.blocks";
 import testcases from "./testcases.py";
-import Visualizer from "./visualizer.jsx";
+import Visualizer from "./visualizer";
 
-Tip-Tap has to prepare lunch and has lined up $N$ foods he wants to eat.
-Each food is a vegetable or a fruit, and Tip-Tap only wants to eat **raw fruit** and **cooked vegetables**.
-You have these blocks available:
+Tip-Tap deve preparare il pranzo ed ha allineato $N$ cibi che vuole mangiare.
+Ogni cibo è una verdura o un frutto, e Tip-Tap vuole solo mangiare **frutta cruda** e **verdura cotta**.
+Hai a disposizione questi blocchi:
 
-  - `N`: the number of foods that Tip-Tap has lined up.
-  - `next food`: the next food that Tip-Tap hasn't eaten yet.
-  - $x$ `is a vegetable`: true if food $x$ is a vegetable.
-  - `cook` $x$: cook food $x$.
-  - `eat` $x$: eat food $x$.
-  - `terminate`: stop eating.
+- `N`: il numero di cibi che Tip-Tap ha allineato.
+- `prossimo cibo`: il prossimo cibo che Tip-Tap non ha ancora mangiato.
+- $x$ `è una verdura`: vero se il cibo $x$ è una verdura.
+- `cuoci` $x$: cuoci il cibo $x$.
+- `mangia` $x$: mangia il cibo $x$.
+- `termina`: smetti di mangiare.
 
-Write a program that allows Tip-Tap to have lunch in the way he likes!
+Scrivi un programma che consenta a Tip-Tap di pranzare come più preferisce!
 
 <Blockly
   customBlocks={customBlocks}
@@ -22,11 +22,3 @@ Write a program that allows Tip-Tap to have lunch in the way he likes!
   testcases={testcases}
   visualizer={Visualizer}
 />
-
-> A possible correct program is the following:
->
-> ![solution](code.png)
->
-> According to this program, for each of the $N$ foods Tip-Tap wants to eat, the protagonist checks if
-> the next food is a vegetable, and if so, cooks it before eating it. At this point he eats the next food
-> (whether it's a vegetable or a fruit), which will be to his liking: cooked vegetable or raw fruit.
