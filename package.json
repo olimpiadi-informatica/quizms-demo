@@ -8,29 +8,28 @@
     "lint": "biome check --write"
   },
   "dependencies": {
-    "@olinfo/quizms": "link:../../../Library/Application Support/pnpm/global/5/node_modules/@olinfo/quizms",
-    "@olinfo/quizms-mdx": "link:../../../Library/Application Support/pnpm/global/5/node_modules/@olinfo/quizms-mdx",
+    "@olinfo/quizms": "4.0.0-canary.20251126",
+    "@olinfo/quizms-mdx": "4.0.0-canary.20251126",
     "@olinfo/react-components": "^0.12.0",
     "@olinfo/tailwind": "^0.1.0",
     "@types/lodash-es": "^4.17.12",
-    "@types/react": "^19.1.13",
-    "@vitejs/plugin-rsc": "^0.4.31",
-    "autoprefixer": "^10.4.21",
+    "@types/react": "^19.2.7",
+    "autoprefixer": "^10.4.22",
     "clsx": "^2.1.1",
-    "firebase-tools": "^14.17.0",
+    "firebase-tools": "^14.26.0",
     "lodash-es": "^4.17.21",
-    "playwright": "^1.55.0",
+    "playwright": "^1.57.0",
     "postcss": "^8.5.6",
-    "react": "^19.1.1",
-    "react-dom": "^19.1.1",
-    "react-server-dom-webpack": "^19.1.1",
-    "tailwindcss": "^3.4.17",
-    "vite": "^7.1.6",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-server-dom-webpack": "^19.2.0",
+    "tailwindcss": "^3.4.18",
+    "vite": "^7.2.4",
     "vm-browserify": "^1.1.2",
-    "wouter": "^3.7.1"
+    "wouter": "^3.8.0"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.2.4"
+    "@biomejs/biome": "^2.3.7"
   },
   "postcss": {
     "plugins": {
