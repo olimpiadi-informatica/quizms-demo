@@ -16,7 +16,7 @@ If Bunny follows the procedure below, can he reach the flag?
 
 ![code](code.asy)
 
-:::answers{.anyCorrect}
+:::answers{.multipleChoice}
 
   - [ ] no, because he stops before reaching the finish line without falling
   - [ ] yes, he reaches or exceeds the finish line
@@ -43,7 +43,7 @@ Still on the same obstacle course, Bunny wants to try out few different strategi
 
 Which of these strategies would allow him to reach or exceed the finish line? Select **all** correct answers:
 
-:::answers{.allCorrect}
+:::answers{.multipleResponse}
 
   - [ ] none of the strategies above
   - [x] strategy 1 works

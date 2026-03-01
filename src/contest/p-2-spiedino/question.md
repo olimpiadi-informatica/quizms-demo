@@ -8,7 +8,7 @@ Now she needs to determine the **value** of the skewer to take it to the market.
 
 What is the value calculated at the end of this procedure?
 
-:::answers{.open}
+:::answers{.openNumber}
 
 ?> 8
 
@@ -29,7 +29,7 @@ What is the value calculated at the end of this procedure?
 
 Allie is now thinking that she would like to change her skewer a bit, so that its value increases by $5$. How many foods will she need to modify at minimum to achieve this result?
 
-:::answers{.open}
+:::answers{.openNumber}
 
 ?> 3
 
