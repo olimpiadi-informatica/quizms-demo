@@ -6,6 +6,8 @@ user_data = [
     { name = "surname",      label = "Cognome",         type = "text",   pinned = true },
     { name = "name",         label = "Nome",            type = "text" },
 ]
+matchingRules=[]
+scoreVisibility="never"
 has_variants = false
 has_online = true
 has_pdf = false
