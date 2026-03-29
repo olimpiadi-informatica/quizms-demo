@@ -1,0 +1,1 @@
+{ "id": "TEST00000X", "name": "Scuola di Test", "contest_ids": ["demo"], "password": "prova", "participation_window": { "start": "2026-01-01T00:00:01+01:00", "end": "2027-01-01T00:00:01+01:00" } }

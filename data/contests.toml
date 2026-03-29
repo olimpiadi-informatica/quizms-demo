@@ -9,12 +9,15 @@ user_data = [
 matchingRules=[]
 scoreVisibility="never"
 has_variants = false
-has_online = true
-has_pdf = false
+has_offline = false
 allow_student_import = false
 allow_student_edit = true
 allow_answer_edit = false
-contest_window_start = 2025-02-13T07:00:00
-contest_window_end = 2025-02-13T16:00:00
-duration = 120
-allow_restart = true
+online_settings = {
+  contest_window = {
+    start = "2026-01-00:00:01+01:00",
+    end = "2027-01-00:00:01+01:00",
+  },
+  duration = 90,
+  allow_restart = true,
+}
