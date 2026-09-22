@@ -1,12 +1,7 @@
 {
   "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
   "files": {
-    "includes": ["src/**", "!src/asy_library"]
-  },
-  "vcs": {
-    "enabled": true,
-    "clientKind": "git",
-    "useIgnoreFile": true
+    "includes": ["src/**", "!src/asy_library", "!**/*.md", "!**/*.svg"]
   },
   "formatter": {
     "indentStyle": "space",
@@ -15,7 +10,7 @@
   "linter": {
     "enabled": true,
     "rules": {
-      "recommended": true,
+      "preset": "recommended",
       "a11y": {
         "useKeyWithClickEvents": "off",
         "useSemanticElements": "off"
@@ -30,8 +25,7 @@
         "useUniqueElementIds": "off"
       },
       "nursery": {
-        "noFloatingPromises": "error",
-        "noImportCycles": "error"
+        "noFloatingPromises": "error"
       },
       "performance": {
         "noImgElement": "off"
@@ -66,6 +60,8 @@
       "suspicious": {
         "noArrayIndexKey": "off",
         "noExplicitAny": "off",
+        "noConfusingVoidType": "off",
+        "noImportCycles": "error",
         "useAwait": "error"
       }
     }

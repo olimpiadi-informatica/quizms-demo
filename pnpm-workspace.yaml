@@ -1,7 +1,4 @@
-ignoredBuiltDependencies:
-  - '@swc/core'
-  - esbuild
-  - re2
-
-onlyBuiltDependencies:
-  - sharp
+allowBuilds:
+  '@swc/core': true
+  esbuild: true
+  sharp: true
