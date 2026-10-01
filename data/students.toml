@@ -1,0 +1,4 @@
+[demo-student]
+venue_id = "demo-school-demo"
+contest_id = "demo"
+user_data = { surname = "Rossi", name = "Mario" }

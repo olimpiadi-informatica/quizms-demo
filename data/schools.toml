@@ -1,0 +1,5 @@
+[demo-school]
+name = "Scuola Demo"
+password = "demo-password"
+contest_ids = "*"
+pdf_variants = []

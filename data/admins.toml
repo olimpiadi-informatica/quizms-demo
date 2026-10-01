@@ -1,0 +1,4 @@
+[demo-admin]
+name = "Admin Demo"
+username = "admin"
+password = "admin-password"

@@ -1,0 +1,4 @@
+[demo]
+origin = "https://your-url.here"
+title = "Quizms demo"
+contests = ["demo"]
