@@ -1,0 +1,24 @@
+import initialBlocks from "./initial-blocks.json";
+import customBlocks from "./s1.en.blocks";
+import testcases from "./testcases.py";
+import { VisualizerEn as Visualizer } from "./visualizer";
+
+Tip-Tap has to prepare lunch and has lined up $N$ foods to eat.
+Each food is a vegetable or a fruit, and Tip-Tap only wants to eat **raw fruit** and **cooked vegetables**.
+You can use these blocks:
+
+- `N`: the number of foods Tip-Tap has lined up.
+- `next food`: the next food that Tip-Tap hasn't eaten yet.
+- $x$ `is a vegetable`: true if food $x$ is a vegetable.
+- `cook` $x$: cook food $x$.
+- `eat` $x$: eat food $x$.
+- `finish`: stop eating.
+
+Write a program that lets Tip-Tap have lunch the way it likes best!
+
+<Blockly
+  customBlocks={customBlocks}
+  initialBlocks={initialBlocks}
+  testcases={testcases}
+  visualizer={Visualizer}
+/>

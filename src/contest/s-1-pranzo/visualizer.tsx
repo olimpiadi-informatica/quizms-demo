@@ -17,7 +17,22 @@ const foods = import.meta.glob<Image>("./asy/cibo-*.asy", {
   query: { w: 120 },
 });
 
-export default function Visualizer({ variables, state }: VisualizerProps<State>) {
+// One visualizer per language, imported by the matching `question.*.mdx`.
+export default function Visualizer(props: VisualizerProps<State>) {
+  return <BaseVisualizer {...props} english={false} />;
+}
+
+export function VisualizerEn(props: VisualizerProps<State>) {
+  return <BaseVisualizer {...props} english />;
+}
+
+function BaseVisualizer({
+  variables,
+  state,
+  english,
+}: VisualizerProps<State> & { english: boolean }) {
+  const stove = english ? "Stove" : "Fornello";
+
   function position(x: number, cook: boolean): [number, number] {
     if (x === -1) return [1.4, 1.3];
     if (cook) return [2.2, 1.5];
@@ -28,7 +43,7 @@ export default function Visualizer({ variables, state }: VisualizerProps<State>)
     <>
       <Canvas scale={130}>
         <Sprite src={bunny} alt="Tip-Tap" x={1.6} y={0.9} follow />
-        <Sprite src={stoveBack} alt="Fornello" x={2.2} y={1.5} />
+        <Sprite src={stoveBack} alt={stove} x={2.2} y={1.5} />
         {range(Math.max(state.pos - 1, 0), state.N).map((i) => {
           const pos = position(i - state.pos, state.queue[i].endsWith(" cotta"));
           return (
@@ -45,12 +60,14 @@ export default function Visualizer({ variables, state }: VisualizerProps<State>)
           src={
             state.pos < state.N && state.queue[state.pos].endsWith(" cotta") ? stoveOn : stoveOff
           }
-          alt="Fornello"
+          alt={stove}
           x={2.2}
           y={1.5}
         />
       </Canvas>
-      <Variables variables={{ ...variables, "N (num. cibi)": state.N }} />
+      <Variables
+        variables={{ ...variables, [english ? "N (no. of foods)" : "N (num. cibi)"]: state.N }}
+      />
     </>
   );
 }

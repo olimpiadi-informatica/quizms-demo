@@ -1,8 +1,8 @@
-This demo contains _4 questions_ to be solved in _30 minutes_.
-This text is customisable (in _markdown_) to give general instructions for your contest.
+Questa demo contiene _5 domande_ da risolvere in _30 minuti_.
+Questo testo è personalizzabile (in _markdown_) per dare istruzioni generali sulla tua gara.
 
-After you submit the test, a pop-up screen will show your results question-by-question. After closing the pop-up, you will be able to see explained solutions for each question.
+Dopo aver consegnato la prova, una finestra mostrerà i tuoi risultati domanda per domanda. Dopo aver chiuso la finestra, potrai vedere le soluzioni spiegate di ogni domanda.
 
-You can inspect the source code of this demo at: [https://github.com/olimpiadi-informatica/quizms-demo](https://github.com/olimpiadi-informatica/quizms-demo)
+Puoi consultare il codice sorgente di questa demo su: [https://github.com/olimpiadi-informatica/quizms-demo](https://github.com/olimpiadi-informatica/quizms-demo)
 
-Give us your feedback on the project at: [https://forms.gle/hEHTm5dxPLHCabHaA](https://forms.gle/hEHTm5dxPLHCabHaA)
+Lasciaci un parere sul progetto su: [https://forms.gle/hEHTm5dxPLHCabHaA](https://forms.gle/hEHTm5dxPLHCabHaA)

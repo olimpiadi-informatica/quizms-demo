@@ -1,5 +1,6 @@
 <Contest>
 
+<Locale lang="en">
 ## Section 1: quizzes
 
 Yes, you can add sections (and other markdown explanation text) as you wish!
@@ -16,23 +17,44 @@ It can be customised separately for each question how much points it is worth if
 - it is answered wrongly (in this section, 0 points).
 
 Also, questions may be of different types (single choice, multiple choice, open ended).
+</Locale>
+<Locale lang="it">
+## Sezione 1: quiz
+
+Sì, puoi aggiungere sezioni (e altro testo di spiegazione in markdown) come preferisci!
+Questo è importante per il mescolamento:
+- vengono mescolate solo le domande all'interno della stessa sezione;
+- come puoi vedere qui sotto, le domande possono essere divise in sottodomande
+  (e un gruppo di sottodomande viene mescolato come un'unica entità);
+- anche le singole opzioni di una domanda possono essere mescolate;
+- inoltre, una domanda può avere più varianti (stessa domanda, "numeri" diversi) scelte a caso.
+
+Per ogni domanda si può decidere separatamente quanti punti vale se:
+- la risposta è corretta (in questa sezione, 5 punti);
+- non viene data risposta (in questa sezione, 1 punto);
+- la risposta è sbagliata (in questa sezione, 0 punti).
+
+Inoltre, le domande possono essere di tipi diversi (risposta singola, risposta multipla, risposta aperta).
+</Locale>
 
 <Section>
   <Problem points={[5, 1, 0]}><P1SaltoOstacoli /></Problem>
   <Problem points={[5, 1, 0]}><P2Spiedino /></Problem>
 </Section>
 
+<Locale lang="en">
 ## Section 2: block programming
 
-QuizMS also supports block programming tasks. In those tasks, you have to write a **single** block program,
-that will be evaluated on **multiple levels** (test cases). It can be customised for each question how
-much points each level is worth if:
-- it is answered correctly (in this test, 5 points);
-- it is not answered, that is, there is no program (in this test, 0.5 points);
-- it is answered wrongly (in this test, 0 points).
+Questions can also ask to write a program with blocks: the answer is checked by running it on several testcases.
+</Locale>
+<Locale lang="it">
+## Sezione 2: programmazione a blocchi
+
+Le domande possono anche chiedere di scrivere un programma a blocchi: la risposta viene verificata eseguendolo su diversi casi di prova.
+</Locale>
 
 <Section>
-  <Problem points={[5, 0.5, 0]}><S1Pranzo /></Problem>
+  <Problem points={[5, 0, 0]}><S1Pranzo /></Problem>
 </Section>
 
 </Contest>

@@ -1,4 +1,5 @@
 [demo]
+languages = ["it", "en"]
 name = "Quizms demo"
 long_name = "Demo di Quizms"
 problem_ids = [1.1, 1.2, 2.1, 2.2, 3]

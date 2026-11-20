@@ -1,4 +1,5 @@
 [demo]
+languages = ["it", "en"]
 secret = "s3cret"
 entry = "contest/contest.mdx"
 header = "header.md"
