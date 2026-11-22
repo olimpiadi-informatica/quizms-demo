@@ -2,3 +2,7 @@ allowBuilds:
   '@swc/core': true
   esbuild: true
   sharp: true
+minimumReleaseAgeExclude:
+  - '@olinfo/quizms-mdx@5.2.0'
+  - '@olinfo/quizms-training@5.2.0'
+  - '@olinfo/quizms@5.2.0'
