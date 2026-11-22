@@ -1,4 +1,13 @@
 allowBuilds:
+  '@firebase/util': true
   '@swc/core': true
   esbuild: true
+  protobufjs: true
   sharp: true
+
+packages:
+  - .
+  - firebase/functions
+
+overrides:
+  '@olinfo/quizms': 'file:.yalc/@olinfo/quizms'
